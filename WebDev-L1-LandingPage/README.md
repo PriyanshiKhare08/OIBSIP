@@ -1,56 +1,70 @@
 
-# VELORA – Elegance Is an Attitude
+# VELORA — Luxury Fashion Landing Page
 
-A luxury fashion brand landing page designed with a modern, elegant, and premium aesthetic.
+### Elegance Is An Attitude.
 
-## About the Project
-VELORA is a fictional luxury fashion brand website created as part of the Oasis Infobyte Web Development Internship – Level 1, Task 1.
+VELORA is a modern luxury fashion brand landing page designed with an elegant editorial aesthetic. It combines premium fashion visuals, sophisticated typography and smooth interactions to create an engaging browsing experience.
 
-The website focuses on elegant typography, sophisticated colors, stylish layouts, and a responsive user experience.
+## Project Overview
+
+This project is developed as part of the **Oasis Infobyte Web Development Internship — Level 1, Task 1 (Landing Page).**
 
 ## Features
-- Elegant and modern landing page design
+
+- Elegant luxury fashion-inspired design
 - Responsive navigation bar
-- Attractive hero section
-- Featured product collection
+- Full-screen hero section
+- Featured collection and product cards
 - Brand story section
-- Fashion categories
-- Journal section
-- Newsletter subscription UI
-- Responsive layout for desktop, tablet, and mobile
-- Smooth scrolling and animations
+- Shop by category section
+- Fashion editorial section
+- Newsletter subscription demo form
+- Smooth scrolling and hover effects
+- Scroll reveal animations
+- Responsive layout for mobile, tablet and desktop
 
 ## Technologies Used
+
 - HTML5
 - CSS3
-- JavaScript
+- Vanilla JavaScript
 
 ## Project Structure
+
 ```text
-WebDev-L1-LandingPage/
+VELORA-Landing-Page/
 │
 ├── index.html
 ├── style.css
 ├── script.js
-└── README.md
+├── README.md
+│
+└── assets/
+    └── images/
 ```
 
 ## How to Run
+
 1. Download or clone this repository.
-2. Open the project folder in VS Code.
-3. Open `index.html` using Live Server.
-4. Explore the VELORA website in your browser.
+2. Open the project folder in Visual Studio Code.
+3. Install the Live Server extension.
+4. Right-click `index.html`.
+5. Select **Open with Live Server**.
 
-## Internship Details
-**Organization:** Oasis Infobyte  
-**Track:** Web Development  
-**Level:** Level 1  
-**Task:** Task 1 – Landing Page
+An internet connection is required for externally hosted images and Google Fonts.
 
-## Created By
-**Priyanshi Khare**  
-B.Tech – Artificial Intelligence & Machine Learning
+## Note
 
----
+VELORA is a fictional fashion brand created for educational and portfolio purposes.
 
-*VELORA is a fictional fashion brand created for educational and internship purposes.*
+The newsletter form is a frontend demonstration and does not store or send email addresses.
+
+## Developed By
+
+**Priyanshi Khare**
+
+B.Tech — Artificial Intelligence and Machine Learning
+
+## Internship
+
+Oasis Infobyte — Web Development Internship
