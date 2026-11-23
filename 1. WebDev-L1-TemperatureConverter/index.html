@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="THERMORA — An interactive temperature conversion laboratory.">
+    <title>THERMORA — Temperature Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <a href="#" class="brand"><span class="brand-mark">T.</span> THERMORA</a>
+    <div class="top-label"><span class="status-dot"></span> TEMPERATURE LAB / 001</div>
+    <button class="theme-button" id="themeToggle" aria-label="Toggle theme">☾</button>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-copy">
+            <p class="eyebrow">A NEW WAY TO READ TEMPERATURE</p>
+            <h1>Feel the<br><em>difference.</em></h1>
+            <p class="hero-description">
+                Three scales. One simple space.
+                Explore temperature with instant, precise conversions
+                and a little scientific curiosity.
+            </p>
+            <a href="#lab" class="hero-link">ENTER THE LAB <span>↘</span></a>
+        </div>
+
+        <div class="hero-art">
+            <div class="art-orbit orbit-a"></div>
+            <div class="art-orbit orbit-b"></div>
+            <div class="art-core">
+                <div class="core-ring"></div>
+                <div class="core-center">°</div>
+            </div>
+            <span class="art-label label-a">273.15 K</span>
+            <span class="art-label label-b">32 °F</span>
+            <span class="art-label label-c">00 °C</span>
+            <div class="art-caption">THE SCIENCE OF<br>EVERY DEGREE</div>
+        </div>
+    </section>
+
+    <section class="lab-section" id="lab">
+        <div class="section-intro">
+            <div>
+                <p class="eyebrow">01 / THE CONVERSION STUDIO</p>
+                <h2>Let's make it <em>clear.</em></h2>
+            </div>
+            <p class="section-note">Enter a value and watch all three scales respond.</p>
+        </div>
+
+        <div class="lab-grid">
+            <div class="control-panel">
+                <div class="panel-heading">
+                    <span class="panel-index">INPUT / 01</span>
+                    <span class="live-label"><span class="status-dot"></span> LIVE ENGINE</span>
+                </div>
+
+                <label class="field-label" for="temperatureInput">YOUR TEMPERATURE</label>
+                <div class="temperature-input-wrap">
+                    <input type="number" id="temperatureInput" placeholder="25" value="25" step="any">
+                    <span class="input-symbol" id="inputSymbol">°C</span>
+                </div>
+
+                <label class="field-label" for="fromUnit">MEASURED IN</label>
+                <select id="fromUnit">
+                    <option value="C">Celsius · °C</option>
+                    <option value="F">Fahrenheit · °F</option>
+                    <option value="K">Kelvin · K</option>
+                </select>
+
+                <div class="control-actions">
+                    <button id="swapButton" class="swap-button" type="button">⇄ <span>SWAP SCALE</span></button>
+                    <button id="resetButton" class="reset-button" type="button">RESET ↺</button>
+                </div>
+
+                <div class="quick-presets">
+                    <p class="field-label">QUICK EXPERIMENTS</p>
+                    <div class="preset-list">
+                        <button class="preset" data-value="0" data-unit="C">Ice point <span>0°C</span></button>
+                        <button class="preset" data-value="25" data-unit="C">Room temp. <span>25°C</span></button>
+                        <button class="preset" data-value="100" data-unit="C">Boiling point <span>100°C</span></button>
+                        <button class="preset" data-value="37" data-unit="C">Body temp. <span>37°C</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-panel">
+                <div class="results-heading">
+                    <div>
+                        <span class="panel-index">OUTPUT / 02</span>
+                        <h3>Three ways to see it.</h3>
+                    </div>
+                    <span class="precision-tag">PRECISION · 2 DP</span>
+                </div>
+
+                <div class="result-cards">
+                    <article class="result-card celsius-card">
+                        <div class="result-card-top"><span>CELSIUS</span><span>01</span></div>
+                        <div class="result-number"><strong id="celsiusValue">25.00</strong><span>°C</span></div>
+                        <div class="result-line"><span></span></div>
+                        <p>Metric temperature scale</p>
+                    </article>
+
+                    <article class="result-card fahrenheit-card">
+                        <div class="result-card-top"><span>FAHRENHEIT</span><span>02</span></div>
+                        <div class="result-number"><strong id="fahrenheitValue">77.00</strong><span>°F</span></div>
+                        <div class="result-line"><span></span></div>
+                        <p>Commonly used in the US</p>
+                    </article>
+
+                    <article class="result-card kelvin-card">
+                        <div class="result-card-top"><span>KELVIN</span><span>03</span></div>
+                        <div class="result-number"><strong id="kelvinValue">298.15</strong><span>K</span></div>
+                        <div class="result-line"><span></span></div>
+                        <p>Scientific temperature scale</p>
+                    </article>
+                </div>
+
+                <div class="thermal-status">
+                    <div class="thermal-icon" id="thermalIcon">☀</div>
+                    <div class="thermal-copy">
+                        <span>THERMAL CONDITION</span>
+                        <strong id="thermalTitle">Comfortably warm</strong>
+                        <p id="thermalDescription">A pleasant temperature around room conditions.</p>
+                    </div>
+                    <div class="thermal-reading" id="thermalReading">25°</div>
+                </div>
+
+                <div class="error-message" id="errorMessage" role="alert"></div>
+                <button id="copyButton" class="copy-all-button" type="button">COPY ALL READINGS ↗</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="visual-section">
+        <div class="section-intro">
+            <div>
+                <p class="eyebrow">02 / TEMPERATURE INSIGHT</p>
+                <h2>Watch the <em>heat.</em></h2>
+            </div>
+            <p class="section-note">A visual snapshot of your current temperature.</p>
+        </div>
+
+        <div class="visual-card">
+            <div class="visual-info">
+                <span class="panel-index">THERMAL PROFILE</span>
+                <h3 id="visualTitle">A balanced atmosphere.</h3>
+                <p id="visualDescription">Your current reading sits in a comfortable range.</p>
+                <div class="visual-metric"><strong id="visualCelsius">25.00</strong><span>°C</span></div>
+                <span class="visual-caption">CURRENT CELSIUS READING</span>
+            </div>
+            <div class="thermometer-visual">
+                <div class="thermo-scale"><span>HOT</span><span>WARM</span><span>COOL</span></div>
+                <div class="thermo-track">
+                    <div class="thermo-fill" id="thermoFill"></div>
+                    <div class="thermo-bulb"></div>
+                </div>
+                <div class="thermo-markers"><span>100°</span><span>25°</span><span>0°</span></div>
+            </div>
+            <div class="visual-decoration">°</div>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <div class="section-intro">
+            <div>
+                <p class="eyebrow">03 / YOUR RECENT ACTIVITY</p>
+                <h2>The <em>lab notes.</em></h2>
+            </div>
+            <button id="clearHistory" class="clear-button" type="button">CLEAR HISTORY ↗</button>
+        </div>
+
+        <div class="history-panel">
+            <div class="history-header"><span>INPUT</span><span>CONVERTED TO</span><span>RESULT</span><span>TIME</span></div>
+            <div id="historyList" class="history-list">
+                <p class="empty-history">Your recent conversions will appear here.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-strip">
+        <div class="about-symbol">T.</div>
+        <div>
+            <p class="eyebrow">A LITTLE SCIENCE, A LOT OF CLARITY</p>
+            <h2>Every scale tells<br>a different story.</h2>
+        </div>
+        <p class="about-text">
+            THERMORA brings Celsius, Fahrenheit and Kelvin together
+            in one thoughtful workspace. Built to make everyday
+            calculations feel simple, clear and intuitive.
+        </p>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="#" class="brand"><span class="brand-mark">T.</span> THERMORA</a>
+    <p>Made with curiosity. Measured with precision.</p>
+    <span>© 2026 THERMORA</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
