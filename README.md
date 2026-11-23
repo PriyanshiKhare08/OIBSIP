@@ -9,7 +9,7 @@ Welcome to my Web Development Internship Level 1 project submissions!
 |---|---|---|
 | 01 | VELORA – Landing Page | [View Website](https://priyanshikhare08.github.io/OIBSIP/WebDev-L1-LandingPage/) |
 | 02 | Personal Portfolio | [View Website](https://priyanshikhare08.github.io/OIBSIP/WebDev-L1-Portfolio/) |
-| 03 | THERMORA – Temperature Converter | [View Website](https://priyanshikhare08.github.io/OIBSIP/1.%20WebDev-L1-TemperatureConverter/) |
+| 03 | THERMORA – Temperature Converter | [View Website](https://priyanshikhare08.github.io/OIBSIP/WebDev-L1-TemperatureConverter/index.html) |
 
 ## 🛠️ Technologies Used
 
